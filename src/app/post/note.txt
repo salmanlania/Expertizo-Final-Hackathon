@@ -1,321 +1,92 @@
-<>
-      <button
-        data-drawer-target="default-sidebar"
-        data-drawer-toggle="default-sidebar"
-        aria-controls="default-sidebar"
-        type="button"
-        className="inline-flex  items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-      >
-        <span className="sr-only">Open sidebar</span>
-        <svg
-          className="w-6 h-6"
-          aria-hidden="true"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            clipRule="evenodd"
-            fillRule="evenodd"
-            d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
-          />
-        </svg>
-      </button>
-      <aside
-        id="default-sidebar"
-        className="fixed top-auto left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
-        aria-label="Sidebar"
-      >
-        <div className="h-screen px-3  overflow-y-auto bg-gray-50 dark:bg-gray-800">
-          <ul className="space-y-1 font-medium">
-            <li>
-              <a
-                href="#"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-              >
-                <IoMdHome />
-                <span className="flex-1 ms-3 whitespace-nowrap">Feeds</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-              >
-                <MdOutlineTravelExplore />
-                <span className="flex-1 ms-3 whitespace-nowrap">Explore</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-              >
-                <FaShoppingCart />
+To implement a friend request system in a React app using Firebase, you'll need to set up Firebase Authentication for user authentication and Firebase Firestore or Firebase Realtime Database for storing friend requests and user data. Below is a basic outline of the steps you can follow:
 
-                <span className="flex-1 ms-3 whitespace-nowrap">
-                  MarketPlace
-                </span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-              >
-                <FaLayerGroup />
-                <span className="flex-1 ms-3 whitespace-nowrap">Groups</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-              >
-                <MdFavorite />
-                <span className="flex-1 ms-3 whitespace-nowrap">
-                  My Favorites
-                </span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-              >
-                <AiFillMessage />
+### Step 1: Set up Firebase in your React App
 
-                <span className="flex-1 ms-3 whitespace-nowrap">Messages</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-              >
-                <IoIosSettings />
-                <span className="flex-1 ms-3 whitespace-nowrap">Setting</span>
-              </a>
-            </li>
-          </ul>
-          <div className="mt-2">
-            <h1 className="indent-4 font-semibold py-2 ">My Contacts</h1>
-            <div className="">
-              <ul className="max-w-md divide-y divide-gray-200 dark:divide-gray-700">
-                <li className="pb-3 sm:pb-4">
-                  <div className="flex items-center space-x-4 rtl:space-x-reverse">
-                    <div className="flex-shrink-0">
-                      <img
-                        className="w-8 h-8 rounded-full"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0v6NgFdKsOSq_Zxc7hRoSh6Xqqsm4I21Y2nzZaFlzIw&s"
-                        alt="Neil image"
-                      />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                        Demo user
-                      </p>
-                      <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                        demo user email
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                <li className="pb-3 sm:pb-4">
-                  <div className="flex items-center space-x-4 rtl:space-x-reverse">
-                    <div className="flex-shrink-0">
-                      <img
-                        className="w-8 h-8 rounded-full"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0v6NgFdKsOSq_Zxc7hRoSh6Xqqsm4I21Y2nzZaFlzIw&s"
-                        alt="Neil image"
-                      />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                        Demo user
-                      </p>
-                      <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                        demo user email
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                <li className="pb-3 sm:pb-4">
-                  <div className="flex items-center space-x-4 rtl:space-x-reverse">
-                    <div className="flex-shrink-0">
-                      <img
-                        className="w-8 h-8 rounded-full"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0v6NgFdKsOSq_Zxc7hRoSh6Xqqsm4I21Y2nzZaFlzIw&s"
-                        alt="Neil image"
-                      />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                        Demo user
-                      </p>
-                      <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                        demo user email
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                <li className="pb-3 sm:pb-4">
-                  <div className="flex items-center space-x-4 rtl:space-x-reverse">
-                    <div className="flex-shrink-0">
-                      <img
-                        className="w-8 h-8 rounded-full"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0v6NgFdKsOSq_Zxc7hRoSh6Xqqsm4I21Y2nzZaFlzIw&s"
-                        alt="Neil image"
-                      />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                        Demo user
-                      </p>
-                      <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                        demo user email
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                <li className="pb-3 sm:pb-4">
-                  <div className="flex items-center space-x-4 rtl:space-x-reverse">
-                    <div className="flex-shrink-0">
-                      <img
-                        className="w-8 h-8 rounded-full"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0v6NgFdKsOSq_Zxc7hRoSh6Xqqsm4I21Y2nzZaFlzIw&s"
-                        alt="Neil image"
-                      />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                        Demo user
-                      </p>
-                      <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                        demo user email
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                <li className="pb-3 sm:pb-4">
-                  <div className="flex items-center space-x-4 rtl:space-x-reverse">
-                    <div className="flex-shrink-0">
-                      <img
-                        className="w-8 h-8 rounded-full"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0v6NgFdKsOSq_Zxc7hRoSh6Xqqsm4I21Y2nzZaFlzIw&s"
-                        alt="Neil image"
-                      />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                        Demo user
-                      </p>
-                      <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                        demo user email
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                <li className="pb-3 sm:pb-4">
-                  <div className="flex items-center space-x-4 rtl:space-x-reverse">
-                    <div className="flex-shrink-0">
-                      <img
-                        className="w-8 h-8 rounded-full"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0v6NgFdKsOSq_Zxc7hRoSh6Xqqsm4I21Y2nzZaFlzIw&s"
-                        alt="Neil image"
-                      />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                        Demo user
-                      </p>
-                      <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                        demo user email
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                <li className="pb-3 sm:pb-4">
-                  <div className="flex items-center space-x-4 rtl:space-x-reverse">
-                    <div className="flex-shrink-0">
-                      <img
-                        className="w-8 h-8 rounded-full"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0v6NgFdKsOSq_Zxc7hRoSh6Xqqsm4I21Y2nzZaFlzIw&s"
-                        alt="Neil image"
-                      />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                        Demo user
-                      </p>
-                      <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                        demo user email
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                <li className="pb-3 sm:pb-4">
-                  <div className="flex items-center space-x-4 rtl:space-x-reverse">
-                    <div className="flex-shrink-0">
-                      <img
-                        className="w-8 h-8 rounded-full"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0v6NgFdKsOSq_Zxc7hRoSh6Xqqsm4I21Y2nzZaFlzIw&s"
-                        alt="Neil image"
-                      />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                        Demo user
-                      </p>
-                      <p className="text-sm text-gray-500 truncate dark:text-gray-400">
-                        demo user email
-                      </p>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </aside>
+Make sure you have Firebase installed and configured in your React app. You can do this by installing the Firebase package and configuring it with your Firebase project credentials.
 
-      <div className="overflow-auto  bg-slate-200  sm:ml-64 w-auto h-screen">
-        <div className=" fixed  z-40  bg-blue-500 w-auto  ">
-          <div className="flex  mx-auto py-2 px-2 space-x-3">
-            <img
-              className="h-9 w-9 rounded-full "
-              src="https://static.vecteezy.com/system/resources/previews/002/002/403/original/man-with-beard-avatar-character-isolated-icon-free-vector.jpg"
-            />
-            <input
-              value={text}
-              onChange={(e) => setText(e.target.value)}
-              className="w-full border rounded-xl "
-              type="text"
-              placeholder="write any post"
-            />
-          </div>
-          <div className=" py-1 px-1 ">
-            <div className="flex justify-around space-x-4">
-              <button className="py-1  items-center text-sm space-x-1 flex">
-                <FaVideo />
-                Live Videos
-              </button>
-              <button className="py-1  items-center text-sm space-x-1 flex">
-                <MdAddPhotoAlternate />
-                <input onChange={(e)=>setFeedImage(e.target.files)} type="file" />
-              </button>
-              <button className="py-1  items-center text-sm  flex">
-                <RiUserFollowFill /> Following
-              </button>
-              <button
-                onClick={addPost}
-                className="py-1 bg-red-600 border rounded-sm text-white px-5"
-              >
-                Post
-              </button>
-            </div>
-          </div>
-        </div>
-        <Feeds  />
-      </div>
-    </>
+```bash
+npm install firebase
+```
+
+Create a Firebase configuration file (e.g., `firebaseConfig.js`) with your Firebase project configuration:
+
+```javascript
+// firebaseConfig.js
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+  appId: "YOUR_APP_ID",
+};
+
+export default firebaseConfig;
+```
+
+### Step 2: Set up Firebase Authentication
+
+Set up Firebase Authentication to handle user sign-up, sign-in, and sign-out. Refer to the Firebase documentation for more details on how to set this up: [Firebase Authentication](https://firebase.google.com/docs/auth).
+
+### Step 3: Create a Firestore Collection for Friend Requests
+
+If you're using Firestore, create a collection to store friend requests. Each document in the collection can represent a friend request.
+
+```javascript
+// Assuming you have Firebase initialized in your app
+import { firestore } from 'firebase/app';
+
+// Add this function to send a friend request
+const sendFriendRequest = async (senderId, receiverId) => {
+  const friendRequestsCollection = firestore().collection('friendRequests');
+
+  try {
+    await friendRequestsCollection.add({
+      senderId,
+      receiverId,
+      status: 'pending', // You can add more statuses like 'accepted' or 'rejected'
+    });
+    console.log('Friend request sent successfully');
+  } catch (error) {
+    console.error('Error sending friend request:', error);
+  }
+};
+```
+
+### Step 4: Display Friend Requests
+
+You can create a component to display pending friend requests and allow the user to accept or reject them.
+
+```javascript
+// Fetch and display friend requests
+const FriendRequests = () => {
+  // Fetch friend requests based on the user's ID
+  // Display the list of friend requests and provide options to accept or reject
+
+  return (
+    <div>
+      {/* Display friend requests */}
+      {/* Accept or reject buttons */}
+    </div>
+  );
+};
+```
+
+### Step 5: Handle Friend Request Actions
+
+Implement functions to handle actions like accepting or rejecting friend requests.
+
+```javascript
+// Handle friend request actions
+const handleAcceptRequest = async (requestId) => {
+  // Update the status of the friend request to 'accepted' in Firestore
+};
+
+const handleRejectRequest = async (requestId) => {
+  // Update the status of the friend request to 'rejected' in Firestore
+};
+```
+
+### Note:
+
+This is a basic outline, and you'll need to adapt it based on your specific requirements and the structure of your app. Additionally, you might want to add security rules in Firestore to control who can read and write to the friend requests collection.

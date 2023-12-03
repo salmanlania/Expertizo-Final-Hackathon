@@ -9,14 +9,14 @@ export default function login() {
     const router = useRouter()
     const [isEmail, setIsEmail] = useState()
     const [IsPassword, setIsPassword] = useState()
-    console.log("Email============>" , isEmail);
-    console.log("Email============>" , IsPassword);
+    console.log("isEmail============>" , isEmail);
+    console.log("IsPassword============>" , IsPassword);
 
     const signInWithFacebook = () => {
         const provider = new FacebookAuthProvider();
         signInWithPopup(authentication, provider)
           .then((re) => {
-            router.push("/dashboard", { scroll: false });
+            router.push('/', { scroll: false });
             console.log(re);
           })
           .catch((err) => {

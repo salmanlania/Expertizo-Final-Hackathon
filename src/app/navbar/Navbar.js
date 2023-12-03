@@ -58,11 +58,7 @@ export default function navbar() {
 
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
-                <a href="#" className="flex items-center ps-2.5 mb-5">
-                        <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-                            Scrollink
-                        </span>
-                    </a>
+                
                   {/* <div className="flex space-x-4">
                     {navigation.map((item) => (
                       <a
